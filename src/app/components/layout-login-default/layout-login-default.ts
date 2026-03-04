@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-layout-login-default',
@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './layout-login-default.html',
   styleUrl: './layout-login-default.scss',
 })
-export class LayoutLoginDefault {}
+export class LayoutLoginDefault {
+  titulo = input<string>("");
+  primayBtnteste= input<string>("");
+  secundayBtnteste= input<string>("");
+
+}
