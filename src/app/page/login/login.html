@@ -3,6 +3,27 @@ titulo="ACESSE"
 primayBtnteste="Entrar via Login"
 secundayBtnteste="Cadastre-se"
 >
-
+<form [formGroup]="loginForm">
+    <app-input-one
+        formControlName="email"
+        inputName="email"
+        type="email"
+        label="Email"
+        placeholder="joseivanmarinho10@gmail.com">
+        
+        <img src="assets/svg/icon-login.svg" width="30px" height="30px">
+    </app-input-one>
+    <app-input-one 
+        formControlName="password"
+        formName="password"
+        type="password"
+        label="Senha"
+        placeholder="Digite sua senha"
+        
+        >
+        <img src="assets/svg/icon-senha.svg" width="30px" height="30px">
+    </app-input-one>
+    <span>Esqueceu sua senha?</span>
+    </form>
 
 </app-layout-login-default>
