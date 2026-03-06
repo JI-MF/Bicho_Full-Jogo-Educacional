@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, EventEmitter, input, Output } from '@angular/core';
 import { RouterOutlet } from "@angular/router";
 
 @Component({
@@ -12,5 +12,17 @@ export class LayoutLoginDefault {
   titulo = input<string>("");
   primayBtnteste= input<string>("");
   secundayBtnteste= input<string>("");
+  disableprimarybtn=input<boolean>(true);
 
+  @Output("submit") onSubmit= new EventEmitter();
+  @Output("navigate") onNavigate= new EventEmitter();
+
+  submit(){
+    this.onSubmit.emit();
+  }
+
+  navigate(){
+    this.onNavigate.emit();
+  }
+  
 }

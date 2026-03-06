@@ -6,13 +6,19 @@
         <ng-content>
         </ng-content>
          <div class="bt">
-             <button class="button-one">{{primayBtnteste()}}</button>
+             <button 
+             class="button-one" 
+             (click)="submit()"
+             [disabled]="disableprimarybtn()"
+             
+             >{{primayBtnteste()}}
+            </button>
         <div class="divider">
             <div></div>
             <span>or</span>
             <div></div>
         </div>
-        <button class="button-two">{{secundayBtnteste()}}</button>
+        <button class="button-two" (click)="navigate()">{{secundayBtnteste()}}</button>
          </div>
        
     </section>

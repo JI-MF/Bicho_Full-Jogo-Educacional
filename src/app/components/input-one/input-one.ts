@@ -22,7 +22,7 @@ export class InputOne implements ControlValueAccessor {
   @Input() type: InputTypes="text";
   @Input() placeholder: string="";
   @Input() label: string="";
-   @Input() inputName: string="";
+  @Input() inputName: string="";
 
   value: string =""
   OnChange: any =() => {}

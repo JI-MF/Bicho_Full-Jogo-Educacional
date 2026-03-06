@@ -2,6 +2,10 @@
 titulo="ACESSE"
 primayBtnteste="Entrar via Login"
 secundayBtnteste="Cadastre-se"
+(submit)="submit()"
+(navigate)="navigate()"
+[disableprimarybtn]="!loginForm.valid"
+
 >
 <form [formGroup]="loginForm">
     <app-input-one
