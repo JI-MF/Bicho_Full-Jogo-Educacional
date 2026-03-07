@@ -1,0 +1,60 @@
+<app-layout-login-default
+titulo="TELA DE CADASTRO"
+primayBtnteste="Cadastre-se"
+secondayBtnteste="Entrar via login"
+(submit)="submit()"
+(navigate)="navigate()"
+[disableprimarybtn]="!signupForm.valid"
+
+>
+<form [formGroup]="signupForm">
+    <app-input-one
+        formControlName="name"
+        inputName="name"
+        type="text"
+        label="Digite seu Nome"
+        placeholder="Ex: Jose Ivan Marinho de Freitas">
+        
+        <img src="assets/svg/icon-login.svg" width="30px" height="30px">
+    </app-input-one>
+
+    <app-input-one 
+        formControlName="email"
+        inputName="email"
+        type="email"
+        label="Digite seu Email"
+        placeholder="Ex: joseivanmarinho10@gmail.com"
+        
+        >
+        <img src="assets/svg/icon-login.svg" width="30px" height="30px">
+    </app-input-one>
+        
+    <app-input-one
+        formControlName="password"
+        inputName="password"
+        type="password"
+        label="Digite uma Senha"
+        placeholder="Sua senha deve conter pelo menos 4 digitos"
+        
+        >
+        <img src="assets/svg/icon-senha.svg" width="30px" height="30px">
+        
+        
+    </app-input-one>
+
+    <app-input-one
+        formControlName="passwordConfirm"
+        inputName="passwordConfirm"
+        type="password"
+        label="Confirme sua Senha"
+        placeholder="As senhas devem ser iguais"
+        
+        >
+        <img src="assets/svg/icon-senha.svg" width="30px" height="30px">
+        
+        
+    </app-input-one>
+  
+    </form>
+
+</app-layout-login-default>

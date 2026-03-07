@@ -11,7 +11,7 @@ import { RouterOutlet } from "@angular/router";
 export class LayoutLoginDefault {
   titulo = input<string>("");
   primayBtnteste= input<string>("");
-  secundayBtnteste= input<string>("");
+  secondayBtnteste= input<string>("");
   disableprimarybtn=input<boolean>(true);
 
   @Output("submit") onSubmit= new EventEmitter();
