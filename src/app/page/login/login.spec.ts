@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ToastrModule } from 'ngx-toastr';
 import { Login } from './login';
 
 describe('Login', () => {
@@ -8,7 +8,9 @@ describe('Login', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Login],
+      imports: [Login,
+                ToastrModule.forRoot()
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Login);
