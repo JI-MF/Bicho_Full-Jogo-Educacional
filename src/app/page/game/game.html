@@ -1,0 +1,26 @@
+<div class="container">
+
+  <h2>Escolha um animal</h2>
+  <p>Selecione um dos 25 animais abaixo.</p>
+
+  <div class="grid-animais">
+
+    @for (animal of animais; track animal.numero) {
+      <div
+        class="card-animal"
+        [class.selecionado]="animalSelecionado === animal"
+        (click)="selecionarAnimal(animal)"
+      >
+       <img [src]="animal.imagem" alt="{{ animal.nome }}" />
+        <div class="numero">{{ animal.numero }}</div>
+        <div class="nome">{{ animal.nome }}</div>
+      </div>
+    }
+
+  </div>
+
+  <button (click)="confirmarAnimal()">
+    Confirmar animal selecionado
+  </button>
+
+</div>

@@ -1,0 +1,33 @@
+.Container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  text-align: center;
+}
+
+
+
+.Title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.Mensage {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color:black;
+}
+
+.Start-button {
+  padding: 10px 25px;
+  font-size: 25px;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

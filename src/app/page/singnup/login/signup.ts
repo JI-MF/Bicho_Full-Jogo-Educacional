@@ -48,9 +48,9 @@ export class SignupComponent {
   }
 
   submit(){
-    this.loginService.login(this.signupForm.value.email!, this.signupForm.value.password).subscribe({
-      next:() => this.toastr.success("Login realizado com sucesso"),
-      error:() => this.toastr.error("Não foi possivél fazer o login, Tente novamente!!!!")
+    this.loginService.signup(this.signupForm.value.name!, this.signupForm.value.email!, this.signupForm.value.password).subscribe({
+      next:() => this.toastr.success("Cadastro Realizado com Sucesso, faça login"),
+      error:() => this.toastr.error("Não foi possivél fazer o Cadastro, Tente novamente!!!!")
     })
     
   }

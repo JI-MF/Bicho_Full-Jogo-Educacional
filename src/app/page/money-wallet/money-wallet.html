@@ -1,0 +1,43 @@
+<div class="conteiner">
+
+  <!-- 🐾 ANIMAL SELECIONADO (AGORA FORA) -->
+  <div class="animal-box" *ngIf="nome; else semSelecao">
+    <h3>Animal selecionado</h3>
+
+    <img [src]="imagem" alt="{{ nome }}">
+
+    <p><strong>{{ numero }} - {{ nome }}</strong></p>
+  </div>
+
+  <ng-template #semSelecao>
+    <div class="animal-box">
+      <p>Nenhum animal selecionado.</p>
+    </div>
+  </ng-template>
+
+  <!-- 💰 CARTEIRA -->
+  <div class="wallet">
+    <h1>{{ message }}</h1>
+
+    <p>Seu saldo é</p>
+    <h2>R$ {{ saldo }}</h2>
+
+    <input type="number" [(ngModel)]="valor" placeholder="Digite o valor:">
+
+    <br><br>
+
+    <button (click)="depositar()">Depositar</button>
+    <button (click)="apostar()">Apostar</button>
+  </div>
+
+  <!-- 📜 HISTÓRICO -->
+  <div class="history">
+    <h3>Histórico de Apostas</h3>
+    <ul>
+      <li *ngFor="let item of historico">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+
+</div>

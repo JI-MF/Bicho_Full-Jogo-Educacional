@@ -1,16 +1,17 @@
 <div class="input-wrapper">
-    <label for="inputName">{{label}}</label>
+    <label [for]="inputName">{{label}}</label>
+
     <div class="input-content">
         <input 
+            [id]="inputName"
             [type]="type" 
             [value]="value"
             (input)="OnInput($event)"
             [placeholder]="placeholder"
         />
+
         <div class="icon">
             <ng-content></ng-content>
         </div>
-
     </div>
-   
 </div>
